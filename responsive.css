@@ -1,0 +1,203 @@
+
+/* Tablet + Mobile */
+@media (max-width: 1023px) {
+    .sub-nav,
+    .header__topsearch,
+    .sidebar,
+    nav {
+        display: none !important;
+    }
+    header {
+        height: 55px;
+    }
+    .mobile-bar, 
+    .mobile-search,
+    .nav-input:checked ~ .overlay {
+        display: block;
+    }
+    .nav-input:checked ~ .nav__mobile {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .mobile-bar  i, 
+    .mobile-search i {
+        color: #fff;
+        font-size: 24px;
+    }
+    .nav__mobile {
+        width: 300px;
+        background: #b7b7b7;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform ease-out 0.5s, opacity ease-out 0.5s;
+    }
+    .nav__mobile h1 {
+        font-size: 4rem;
+        text-align: center;
+        color: #cab92b;
+        padding: 16px;
+        background: transparent;
+        border-bottom: 2px solid #696969;
+    }
+    .nav__mobile-list {
+        padding-left: 28px;
+        padding-top: 12px;
+        padding-right: 12px;
+        font-size: 2.4rem;
+    }
+    .nav__mobile-item {
+        color: #212121;
+        margin-top: 15px;
+        display: block;
+        font-size: 18px;
+        line-height: 1.444em;
+        font-weight: 700;
+    } 
+    
+    .nav__mobile-item i {
+        color: #212121;
+        float: right;
+        font-size: 20px;
+        padding: 4px;
+        transform: rotate(-90deg);
+        transition: transform linear 0.1s;
+    }
+    
+    .subnav-input:checked ~ .nav__mobile-item i {
+        transform: rotate(0);
+    }
+    
+    .subnav__mobile {
+        font-size: 1.3rem;
+        padding-left: 4px;
+        padding-top: 4px;
+        margin-right: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height linear 0.5s;
+    }
+    
+    .subnav-input:checked ~ .subnav__mobile {
+        max-height: 450px;
+    }
+    
+    .subnav__mobile a {
+        color: #636363;
+        display: block;
+        border-bottom: 1px solid #75757585;
+        line-height: 32px;
+    }
+    
+    .mobile-search {
+        width: 54px;
+        padding-left: 19px;
+    }
+    
+    .mobile-search__input {
+        position: absolute;
+        background: #b7b7b7;
+        right: 0px;
+        top: 60px;
+        width: 450px;
+        height: 40px;
+        border-radius: 1px;
+        padding: 4px;
+        transform: scale(0);
+        opacity: 0;
+        display: flex;
+        transform-origin: calc(100% - 25px) top;
+        transition: transform ease-in 0.15s, opacity ease-in 0.15s;
+    }
+    
+    .mobile-search__input::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: -28px;
+        right: 15px;
+        border: 15px inset #b7b7b7;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        box-sizing: border-box;
+    }
+    .search-input:checked ~ .mobile-search__input {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .search-input:disabled ~ .mobile-search__input {
+        animation: fadeout linear 1s;
+    }
+    .mobile-search .close { display: none; }
+    
+    
+    .search-input:checked ~ .close {
+        display: block;
+    }
+    
+    .search-input:checked ~ .open {
+        display: none;
+    }
+    
+    .mobile-search__input input[type=text] {
+        font-size: 1.4rem;
+        flex: 1;
+        padding: 8px;
+        border-radius: 3px;
+    }
+    
+    .mobile-search__input input[type=submit] {
+        background: url("./img/search-submit.png") no-repeat;
+        width: 32px;
+        height: 100%;
+        margin: 0 8px;
+    }
+    .contact {
+        text-align: center;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    header h1, main h1  {
+        margin-left: 12px;
+        margin-right: 4px;
+    }
+
+    main h1 {
+        font-size: 2.7rem;
+    }
+    .mobile-search__input {
+        width: 400px;
+    }
+    .slider {
+        margin: 0 8px;
+    }
+    .movie__update-poster {
+        display: none;
+    }
+    .movie__update-list {
+        margin: 0 8px;
+    }
+
+    .movie__list-box>ul {
+        justify-content: space-around;
+    }
+
+    footer {
+        text-align: center;
+    }
+    footer .flex-row {
+        flex-direction: column;
+    }
+    footer img {
+        margin: auto;
+    }
+}
