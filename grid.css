@@ -50,7 +50,7 @@
 }
 
 .xl-0 {
-    display: none;
+    display: none !important;
 }
 
 .xl-1,
@@ -449,7 +449,7 @@
     }
 
     .s-0 {
-        display: none;
+        display: none !important;
     }
 
     .s-1 {

@@ -5,6 +5,7 @@ a {
 
 .movie-status {
     max-width: 83%;
+    width: fit-content;
     color: #fff;
     background-color: #A21D0A;
     margin-left: 4px;
@@ -156,11 +157,13 @@ main h1 {
 }
 /*Slider*/
 .slider {
+    --pad: 15px;
     background: url("./img/item_bg.gif") repeat;
     margin-top: 4px;
-    overflow: hidden;
+    position: relative;
+    padding: var(--pad);
+    white-space: nowrap;
 }
-
 .slider a {
     display: block;
     height: 300px;
@@ -168,21 +171,12 @@ main h1 {
     padding-top: 8px;
     margin-right: 12px;
 }
-
 .slider a:hover h2 {
     color: #dacb46;
 }
-
-.slider__list {
-    padding: 15px;
-    width: 2000px;
-}
-
 .slider__list ul li {
     display: inline-block;
 }
-
-
 .slider__movie-name {
     background-color: rgb(0 0 0 / 75%);
     padding: 8px 4px;
@@ -206,47 +200,38 @@ main h1 {
 .movie-container {
     margin-top: 32px;
 }
+.movie-container>.row {
+    height: 577.33px;
+    overflow: hidden;
+}
 /*Movie update*/
 .movie__update-poster {
     height: 580px;
-    overflow-y: scroll;
-}
-.movie__update-poster::-webkit-scrollbar{
-    display: none;
 }
 .movie__update-poster img {
     width: 100%;
 }
-.movie__update-list {
-    position: relative;
-}
-.movie__update-list label {
+.movie__update-tab {
     line-height: 40px;
-    display: block;
     background: #2e2e2e;
     color: #b9b9b9;
     text-align: center;
     font-size: 14px;
     cursor: pointer;
 }
-.movie__update-list label:hover {
+.movie__update-tab:hover {
     color: #ddd;
 }
-.movie__update-list input:checked + label {
+.active {
     background: url("./img/item_bg.gif");
     color: #46E1FF;
 }
-.movie__update-list input:checked ~ ul {
-    z-index: 99;
-}
-.movie__update-list ul {
+.movie__update-pane {
     background: url("./img/item_bg.gif");
-    width: calc(33.33333%*3 - var(--gutter) *2);
-    position: absolute;
-    left: var(--gutter);
+    width: calc(33.33333% * 3);
     padding-top: 8px;
     padding-bottom: 9px;
-    height: calc(100% - 40px);
+    display: none;
 }
 .movie__update-list ul>li {
     border-bottom: 1px dashed #555;

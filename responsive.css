@@ -163,6 +163,12 @@
     }
 
 }
+/*Tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .movie-container>.row {
+        height: 416px;
+    }
+}
 
 /* Mobile */
 @media (max-width: 739px) {
@@ -184,7 +190,7 @@
         display: none;
     }
     .movie__update-list {
-        margin: 0 8px;
+        padding: 0 8px;
     }
 
     .movie__list-box>ul {
