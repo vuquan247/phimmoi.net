@@ -50,11 +50,11 @@ input {
 }
 
 /*Js Open*/
-.open-block {
-    display: block;
+.show-block {
+    display: block !important;
 }
 
-.open-flex {
+.show-flex {
     display: flex;
 }
 
